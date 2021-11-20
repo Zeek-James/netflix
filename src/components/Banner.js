@@ -69,7 +69,7 @@ export const Banner = () => {
   const { width } = useWindowSize();
 
   const [movie, setMovie] = useState({});
-  const [loading, setLoading] = useState(true;
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,12 +88,11 @@ export const Banner = () => {
   };
 
   const words = (str, n) => {
-    if(!movie==={})
-    return str.length > n ? `${str.substr(0, n)}...` : str;
+    if (!movie === {}) return str.length > n ? `${str.substr(0, n)}...` : str;
   };
 
   return loading ? (
-    <Loading/>
+    <Loading />
   ) : (
     <div className={classes.container}>
       <Grid
