@@ -69,11 +69,10 @@ export const Banner = () => {
   const { width } = useWindowSize();
 
   const [movie, setMovie] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true;
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       const req = await instance(requests.fetchNetflixOriginals);
       setMovie(
         req.data.results[Math.floor(Math.random() * req.data.results.length)]
